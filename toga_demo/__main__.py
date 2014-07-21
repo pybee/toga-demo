@@ -10,13 +10,15 @@ import toga
 
 def button_handler(widget):
     print("button press")
+    for i in range(0, 10):
+        yield 1
+        print ('still running... (iteration %s)' % i)
 
-
-def action1():
+def action1(widget):
     print("action 1")
 
 
-def action2():
+def action2(widget):
     print("action 2")
 
 
