@@ -15,11 +15,14 @@ def button_handler(widget):
         print ('still running... (iteration %s)' % i)
 
 def action1(widget):
-    print("action 1")
-
+    toga.Dialog.info('Toga', 'THIS! IS! TOGA!!')
 
 def action2(widget):
-    print("action 2")
+    if toga.Dialog.question('Toga', 'Is this cool or what?'):
+        toga.Dialog.info('Happiness', 'I know, right! :-)')
+    else:
+        toga.Dialog.info('Shucks...', "Well aren't you a spoilsport... :-(")
+
 
 
 def main():
@@ -60,7 +63,7 @@ def main():
 
     app.main_window.content = split
 
-    cmd1 = toga.Command(action1, 'Action 1', tooltip='Perform action 1', icon=os.path.join(os.path.dirname(__file__), 'icons/brutus-72.png'))
+    cmd1 = toga.Command(action1, 'Action 1', tooltip='Perform action 1', icon=os.path.join(os.path.dirname(__file__), 'icons/brutus-32.png'))
     cmd2 = toga.Command(action2, 'Action 2', tooltip='Perform action 2', icon=toga.TIBERIUS_ICON)
 
     app.main_window.toolbar = [cmd1, toga.SEPARATOR, cmd2]
