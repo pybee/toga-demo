@@ -4,10 +4,7 @@ from __future__ import print_function, unicode_literals, absolute_import
 This is the main entry point for the Toga Demo.
 '''
 import os
-
 import toga
-
-
 
 
 class DemoApp(toga.App):
