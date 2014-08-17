@@ -2,7 +2,6 @@
 import io
 import re
 from setuptools import setup, find_packages
-import sys
 
 
 with io.open('./toga_demo/__init__.py', encoding='utf8') as version_file:
@@ -17,16 +16,6 @@ with io.open('README.rst', encoding='utf8') as readme:
     long_description = readme.read()
 
 
-# Attempt to autodetect the platform
-if sys.platform == 'darwin':
-    platform = 'cocoa'
-elif sys.platform == 'linux2':
-    platform = 'gtk'
-elif sys.platform == 'win32':
-    platform = 'win32'
-else:
-    raise NotImplementedError('Platform is not currently supported')
-
 setup(
     name='toga-demo',
     version=version,
@@ -40,9 +29,11 @@ setup(
     package_data={
         'toga_demo': ['icons/*.icns', 'icons/*.png'],
     },
-    install_requires=[
-        'toga[%s]' % platform
-    ],
+    extras_require={
+        ':sys_platform=="win32"': ['toga[win32]'],
+        ':sys_platform=="linux2"': ['toga[gtk]'],
+        ':sys_platform=="darwin"': ['toga[cocoa]'],
+    },
     entry_points={
         'console_scripts': [
             'toga-demo = toga_demo.__main__:main',
