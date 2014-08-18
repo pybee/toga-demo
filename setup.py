@@ -29,11 +29,9 @@ setup(
     package_data={
         'toga_demo': ['icons/*.icns', 'icons/*.png'],
     },
-    extras_require={
-        ':sys_platform=="win32"': ['toga[win32]'],
-        ':sys_platform=="linux2"': ['toga[gtk]'],
-        ':sys_platform=="darwin"': ['toga[cocoa]'],
-    },
+    install_requires=[
+        'toga',
+    ],
     entry_points={
         'console_scripts': [
             'toga-demo = toga_demo.__main__:main',
