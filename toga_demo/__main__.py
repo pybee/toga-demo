@@ -19,6 +19,9 @@ class DemoApp(toga.App):
         left_table.insert(None, 'root3', 'value3')
         left_table.insert(1, 'root4', 'value4')
 
+        for i in range(0, 100):
+            left_table.insert(None, 'root%s' % (i+5), 'value%s' % (i+5))
+
         left_tree = toga.Tree(['Navigate'])
 
         left_tree.insert(None, None, 'root1')
@@ -36,22 +39,9 @@ class DemoApp(toga.App):
         left_container.add('Tree', left_tree)
 
         right_content = toga.Container()
-        buttons = [
-            toga.Button('Hello world %s' % b, on_press=self.button_handler)
-            for b in range(0, 10)
-        ]
 
-        for i, button in enumerate(buttons):
-            right_content.add(button)
-
-            if i == 0:
-                right_content.constrain(button.TOP == right_content.TOP + 50)
-            else:
-                right_content.constrain(button.TOP == buttons[i-1].BOTTOM + 50)
-            right_content.constrain(button.LEADING == right_content.LEADING + 50)
-            right_content.constrain(button.TRAILING + 50 == right_content.TRAILING)
-
-        right_content.constrain(buttons[-1].BOTTOM + 50 < right_content.BOTTOM)
+        for i in range(0, 10):
+            right_content.add(toga.Button('Hello world %s' % i, on_press=self.button_handler, margin=20))
 
         right_container = toga.ScrollContainer()
 
@@ -67,7 +57,6 @@ class DemoApp(toga.App):
         self.main_window.toolbar = [cmd1, toga.SEPARATOR, cmd2]
 
         self.main_window.content = split
-
 
     def button_handler(self, widget):
         print("button press")
