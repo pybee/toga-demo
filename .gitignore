@@ -6,3 +6,6 @@ dist
 build
 _build
 distribute-*
+macOS
+iOS
+android

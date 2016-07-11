@@ -29,9 +29,13 @@ setup(
     package_data={
         'toga_demo': ['icons/*.icns', 'icons/*.png'],
     },
-    install_requires=[
-        'toga',
-    ],
+    install_requires=[],
+    extras_require={
+        ':sys_platform=="win32"': ['toga-win32'],
+        ':sys_platform=="linux"': ['toga-gtk'],
+        ':sys_platform=="linux2"': ['toga-gtk'],
+        ':sys_platform=="darwin"': ['toga-cocoa'],
+    },
     entry_points={
         'console_scripts': [
             'toga-demo = toga_demo.__main__:main',
@@ -47,4 +51,16 @@ setup(
         'Topic :: Software Development',
         'Topic :: Utilities',
     ],
+    options={
+        'app': {
+            'formal_name': 'Toga Demo',
+            'bundle': 'org.pybee',
+            # 'icon': 'icons/macos',
+        },
+        'macos': {
+            'app_requires': [
+                'toga[cocoa]'
+            ]
+        },
+    }
 )
