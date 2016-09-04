@@ -29,13 +29,9 @@ setup(
     package_data={
         'toga_demo': ['icons/*.icns', 'icons/*.png'],
     },
-    install_requires=[],
-    extras_require={
-        ':sys_platform=="win32"': ['toga-win32'],
-        ':sys_platform=="linux"': ['toga-gtk'],
-        ':sys_platform=="linux2"': ['toga-gtk'],
-        ':sys_platform=="darwin"': ['toga-cocoa'],
-    },
+    install_requires=[
+        'toga'
+    ],
     entry_points={
         'console_scripts': [
             'toga-demo = toga_demo.__main__:main',
@@ -47,7 +43,10 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3 :: only',
         'Topic :: Software Development',
         'Topic :: Utilities',
     ],
@@ -59,7 +58,6 @@ setup(
         },
         'macos': {
             'app_requires': [
-                'toga[cocoa]'
             ]
         },
     }

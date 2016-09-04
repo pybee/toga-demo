@@ -9,6 +9,10 @@ from colosseum import CSS
 class TogaDemo(toga.App):
 
     def startup(self):
+        # Create the main window
+        self.main_window = toga.MainWindow(self.name)
+        self.main_window.app = self
+
         left_container = toga.OptionContainer()
 
         left_table = toga.Table(['Hello', 'World'])
@@ -52,6 +56,9 @@ class TogaDemo(toga.App):
         self.main_window.toolbar = [cmd1, toga.SEPARATOR, cmd2]
 
         self.main_window.content = split
+
+        # Show the main window
+        self.main_window.show()
 
     def button_handler(self, widget):
         print("button press")
