@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from __future__ import print_function, unicode_literals, absolute_import
 
 import os
 import toga
@@ -38,7 +37,7 @@ class TogaDemo(toga.App):
         left_container.add('Table', left_table)
         left_container.add('Tree', left_tree)
 
-        right_content = toga.Container()
+        right_content = toga.Box()
         for b in range(0, 10):
             right_content.add(toga.Button('Hello world %s' % b, on_press=self.button_handler, style=CSS(margin=20)))
 
