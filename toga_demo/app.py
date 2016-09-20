@@ -66,10 +66,10 @@ class TogaDemo(toga.App):
             print ('still running... (iteration %s)' % i)
 
     def action1(self, widget):
-        toga.Dialog.info('Toga', 'THIS! IS! TOGA!!')
+        self.main_window.info_dialog('Toga', 'THIS! IS! TOGA!!')
 
     def action2(self, widget):
-        if toga.Dialog.question('Toga', 'Is this cool or what?'):
-            toga.Dialog.info('Happiness', 'I know, right! :-)')
+        if self.main_window.question_dialog('Toga', 'Is this cool or what?'):
+            self.main_window.info_dialog('Happiness', 'I know, right! :-)')
         else:
-            toga.Dialog.info('Shucks...', "Well aren't you a spoilsport... :-(")
+            self.main_window.info_dialog('Shucks...', "Well aren't you a spoilsport... :-(")
