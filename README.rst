@@ -8,7 +8,7 @@ A demonstration of the capabilities of the `Toga widget toolkit`_.
 Quickstart
 ----------
 
-For details of Toga's pre-requisites, see the `toga repostory on GitHub`_.
+For details of Toga's pre-requisites, see the `toga repository on GitHub`_.
 
 Once those pre-requisites have been met, in your virtualenv, install Toga Demo,
 and then run it::
