@@ -3,6 +3,8 @@ Toga Demo
 
 A demonstration of the capabilities of the Toga widget toolkit.
 
+** Toga requires Python 3 **
+
 Quickstart
 ----------
 
@@ -12,21 +14,6 @@ In your virtualenv, install Toga Demo, and then run it::
     $ toga-demo
 
 This will pop up a GUI window.
-
-Problems using virtualenv under Ubuntu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Toga uses the system native python GTK+3 bindings for display purposes.
-However, if you're using a `--no-site-packages` virtualenv, the Python bindings
-for GTK won't be in your `PYTHONPATH`.
-
-Unfortunately, you can't `pip install` GTK+ bindings, so you have to use a
-workaround. To make the system GTK+ bindings available to your virtualenv,
-symlinking the `gi` module from the system dist-packages directory into your
-virtualenv's site-packages::
-
-    $ cd $VIRTUAL_ENV/lib/python2.7/site-packages
-    $ ln -si /usr/lib/python2.7/dist-packages/gi
 
 Community
 ---------
