@@ -1,14 +1,17 @@
 Toga Demo
 =========
 
-A demonstration of the capabilities of the Toga widget toolkit.
+A demonstration of the capabilities of the `Toga widget toolkit`_.
 
-** Toga requires Python 3 **
+**Toga requires Python 3**
 
 Quickstart
 ----------
 
-In your virtualenv, install Toga Demo, and then run it::
+For details of Toga's pre-requisites, see the `toga repostory on GitHub`_.
+
+Once those pre-requisites have been met, in your virtualenv, install Toga Demo,
+and then run it::
 
     $ pip install toga-demo
     $ toga-demo
@@ -22,9 +25,7 @@ Toga Demo is part of the `BeeWare suite`_. You can talk to the community through
 
 * `@pybeeware on Twitter`_
 
-* The `BeeWare Users Mailing list`_, for questions about how to use the BeeWare suite.
-
-* The `BeeWare Developers Mailing list`_, for discussing the development of new features in the BeeWare suite, and ideas for new tools for the suite.
+* The `pybee/general`_ channel on Gitter.
 
 Contributing
 ------------
@@ -34,9 +35,10 @@ want to contribute code, please `fork the code`_ and `submit a pull request`_.
 
 .. _BeeWare suite: http://pybee.org
 .. _Read The Docs: http://toga-demo.readthedocs.org
+.. _Toga widget toolkit: http://pybee.org/toga
+.. _toga repository on GitHub: https://github.com/pybee/toga
 .. _@pybeeware on Twitter: https://twitter.com/pybeeware
-.. _BeeWare Users Mailing list: https://groups.google.com/forum/#!forum/beeware-users
-.. _BeeWare Developers Mailing list: https://groups.google.com/forum/#!forum/beeware-developers
+.. _pybee/general: https://gitter.im/pybee/general
 .. _log them on Github: https://github.com/pybee/toga-demo/issues
 .. _fork the code: https://github.com/pybee/toga-demo
 .. _submit a pull request: https://github.com/pybee/toga-demo/pulls
