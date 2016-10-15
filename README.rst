@@ -18,6 +18,11 @@ and then run it::
 
 This will pop up a GUI window.
 
+If you have cloned the toga-demo repository, you can run the demo like this::
+
+    $ pip3 install toga
+    $ python3 -m toga_demo
+
 Community
 ---------
 
