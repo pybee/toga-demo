@@ -61,9 +61,32 @@ setup(
             'bundle': 'org.pybee',
             # 'icon': 'icons/macos',
         },
+        # 'ios': {
+        #     'app_requires': [
+        #         'toga-ios'
+        #     ]
+        # },
+        'django': {
+            'app_requires': [
+                'toga-django'
+            ]
+        },
         'macos': {
             'app_requires': [
             ]
         },
+        'linux': {
+            'app_requires': [
+            ]
+        },
+        'windows': {
+            'app_requires': [
+            ]
+        },
+        # 'android': {
+        #     'app_requires': [
+        #         'toga-android'
+        #     ]
+        # }
     }
 )
