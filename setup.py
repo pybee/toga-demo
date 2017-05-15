@@ -35,7 +35,8 @@ setup(
         'toga_demo': ['icons/*.icns', 'icons/*.png'],
     },
     install_requires=[
-        'toga>=%s' % version
+        'toga>=0.2.12'
+        # 'toga>=%s' % version
     ],
     entry_points={
         'console_scripts': [
