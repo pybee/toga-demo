@@ -73,3 +73,7 @@ class TogaDemo(toga.App):
             self.main_window.info_dialog('Happiness', 'I know, right! :-)')
         else:
             self.main_window.info_dialog('Shucks...', "Well aren't you a spoilsport... :-(")
+
+
+def main():
+    return TogaDemo('Toga Demo', 'org.pybee.toga-demo')
