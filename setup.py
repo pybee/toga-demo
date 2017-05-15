@@ -39,7 +39,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'toga-demo = toga_demo.__main__:main',
+            'toga-demo = toga_demo.__main__:run',
         ]
     },
     license='New BSD',
