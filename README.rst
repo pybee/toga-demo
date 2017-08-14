@@ -1,3 +1,7 @@
+**THIS REPOSITORY IS IN THE ATTIC**
+
+This functionality has been merged into the main `Toga <https://github.com/pybee/toga>`__ repository.
+
 Toga Demo
 =========
 
